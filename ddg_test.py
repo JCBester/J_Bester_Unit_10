@@ -6,7 +6,7 @@ resp_data = requests.get(
 ).json()
 def is_in_resp_data(name):
     for i in resp_data["RelatedTopics"]:
-        if name in i["Result"]:
+        if name in i["Text"]:
             return True
     return False
 @pytest.mark.parametrize("president", [
